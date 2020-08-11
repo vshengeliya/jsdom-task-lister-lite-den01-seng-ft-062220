@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // your code here
   let form = document.getElementById("create-task-form");
   let ul = document.getElementById("tasks");
-  // console.dir(form)
   form.addEventListener('submit', function(e) {
     e.preventDefault()
     console.log("clicked") 
@@ -19,8 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
      if (colors.value == "red-color"){
        li.style.color = "red"
-      //  console.log(e)
-      //  console.log(e.style.color)
      }else if(colors.value == "yellow-color"){
       li.style.color = "yellow"
      } else {
@@ -29,9 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   })
   ul.addEventListener('click', function(e){
-    // console.log("clicked")
-    let li = e.target.parentNode
-    // console.dir(e.target)
+    let li = e.target.parentNode 
     li.remove()
   })
 });
